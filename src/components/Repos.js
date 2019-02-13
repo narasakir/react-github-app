@@ -20,7 +20,7 @@ Repos.defaultProps = {
 Repos.propTypes = {
   className: React.PropTypes.string,
   title: React.PropTypes.string.isRequired,
-  repos: React.PropTypes.array.isRequired,
+  repos: React.PropTypes.array.isRequired
 }
 
 export default Repos

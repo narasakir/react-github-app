@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
 
-const UserInfo = ({ username, repos, followers, following, login }) => (
+const UserInfo = ({ username, repos, photo, followers, following, login }) => (
   <div className='user-info'>
-    <img src='' />
-    <h1 lassName='user-name'>
+    <img src={photo} />
+    <h1 className='user-name'>
       <a href={`https://github.com/${login}`}>{username}</a>
     </h1>
     <ul className='repos-info'>

@@ -8,7 +8,8 @@ class App extends Component {
     this.state = {
       userInfo: null,
       repos: [],
-      starred: []
+      starred: [],
+      isFetching: false,
     }
   }
 
@@ -21,10 +22,11 @@ class App extends Component {
     const value = e.target.value
     const keyCode = e.wich || e.keyCode
     const ENTER = 13;
+
     if (keyCode === ENTER) {
+      this.setState({ isFetching: true })
       ajax().get(this.getGitHubApiUrl(value))
         .then((result) => {
-          console.log(result)
           this.setState({
             userInfo: {
               username: result.name,
@@ -38,6 +40,7 @@ class App extends Component {
             starred: [],
           })
         })
+        .always(() => this.setState({ isFetching: false }))
     }
   }
 

@@ -56,14 +56,21 @@ module.exports = validate({
         test: /\.css$/,
         exclude: /node_modules|(search|style)\.css/,
         include: /src/,
-        loader: styles.extract('style', 'css')
+        loader: styles.extract('style', 'css?modules')
       },
       {
         test: /(search|style)\.css$/,
         exclude: /node_modules/,
         include: /src/,
-        loader: crp.extract('style', 'css')
+        loader: crp.extract('style', 'css?modules')
       },
     ]
+  },
+
+  resolve: {
+    alias: {
+      src: path.join(__dirname, 'src'),
+      components: path.join(__dirname, 'src', 'components')
+    }
   }
 })

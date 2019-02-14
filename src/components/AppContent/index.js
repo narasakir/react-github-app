@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
-import Search from './Search'
-import UserInfo from './UserInfo'
-import Actions from './Actions'
-import Repos from './Repos'
+import Search from 'components/Search'
+import UserInfo from 'components/UserInfo'
+import Actions from 'components/Actions'
+import Repos from 'components/Repos'
 import style from './app.css'
 
 const AppContent = ({ userInfo, repos, starred, handleSearch, getRepos, getStarred, isFetching }) => (

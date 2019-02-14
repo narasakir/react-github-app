@@ -3,9 +3,10 @@ import Search from './Search'
 import UserInfo from './UserInfo'
 import Actions from './Actions'
 import Repos from './Repos'
+import style from './app.css'
 
 const AppContent = ({ userInfo, repos, starred, handleSearch, getRepos, getStarred, isFetching }) => (
-  <div className='app'>
+  <div className={style.app}>
     <Search isDisabled={isFetching} handleSearch={handleSearch} />
 
     {isFetching && <div>Carregando...</div>}
@@ -16,7 +17,6 @@ const AppContent = ({ userInfo, repos, starred, handleSearch, getRepos, getStarr
 
     {
       !!repos.length && <Repos
-        className={'repos'}
         title={'Repositórios'}
         repos={repos}
       />
@@ -24,7 +24,6 @@ const AppContent = ({ userInfo, repos, starred, handleSearch, getRepos, getStarr
 
     {
       !!starred.length && <Repos
-        className={'starred'}
         title={'Favoritos'}
         repos={starred}
       />

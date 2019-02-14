@@ -1,7 +1,8 @@
 import React from 'react'
+import style from './search.css'
 
 const Search = ({ handleSearch, isDisabled }) => (
-  <div className='search'>
+  <div className={style.search}>
     <input
       type='search'
       placeholder='Digite o nome do usuario no Github'

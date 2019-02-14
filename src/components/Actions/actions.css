@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+.actions {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions button {
+  font-size: 20px;
+  font-weight: 700;
+  height: 50px;
+  text-transform: uppercase;
+  width: 48%;
+}

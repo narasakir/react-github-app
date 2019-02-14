@@ -33,7 +33,7 @@ const AppContent = ({ userInfo, repos, starred, handleSearch, getRepos, getStarr
 )
 
 AppContent.propTypes = {
-  userInfo: PropTypes.object.isRequired,
+  userInfo: PropTypes.object,
   repos: PropTypes.array.isRequired,
   starred: PropTypes.array.isRequired,
   isFetching: PropTypes.bool.isRequired,

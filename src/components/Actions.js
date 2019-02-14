@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
-const UserInfo = ({ getRepos, getStarred }) => (
+const Actions = ({ getRepos, getStarred }) => (
   <div className='actions'>
     <button onClick={getRepos}>Ver Repositorios</button>
     <button onClick={getStarred}>Ver Favoritos</button>
   </div>
 )
 
-export default UserInfo
+Actions.propTypes = {
+  getRepos: PropTypes.func.isRequired,
+  getStarred: PropTypes.func.isRequired,
+}
+
+export default Actions

@@ -7,15 +7,13 @@ const Search = ({ handleSearch, isDisabled }) => (
       placeholder='Digite o nome do usuario no Github'
       onKeyUp={handleSearch}
       disabled={isDisabled}
-      onChange={(e) => {
-        console.log(e)
-      }}
     />
   </div>
 )
 
 Search.propTypes = {
-  handleSearch: React.PropTypes.func.isRequired
+  handleSearch: React.PropTypes.func.isRequired,
+  isDisabled: React.PropTypes.bool.isRequired
 }
 
 export default Search
